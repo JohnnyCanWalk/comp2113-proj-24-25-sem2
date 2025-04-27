@@ -1,6 +1,16 @@
 # comp2113-proj-24-25-sem2
 
-Project of Group 28 
+### Project of Group 28, 24-25 Sem 2 
+
+## Team Members:
+  Chan Tsz Him Chris  
+  
+  Chu CHun Ho Kevin  3036387753  
+
+# Game Description
+  boss? stages? realms? ill wait
+
+  
 team members, application description, features, non-standard libraries, and compilation/execution instructions.
 
 ▪ Identification of the team members. 
