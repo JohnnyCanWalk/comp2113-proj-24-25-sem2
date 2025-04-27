@@ -7,14 +7,45 @@
 #include <algorithm>
 #include <chrono>
 #include <map>
+#include <fstream>
+#include "game.h"
 
 using namespace std;
 using namespace std::chrono;
 
-// Game parameters
+
+//input level parameters from txt files
+// multiple take negative value fro harder
+int loadpara(int level, string &art, vector<string> &emojis, int &multiple) {
+    string path = "lv_info/lv" + to_string(level) + ".txt";
+    ifstream file(path);
+    string line;
+    if (file){
+    string m;
+    getline(file, m);
+    multiple = stoi(m);
+        for (int i = 0; i < 3; i++) {
+        string em;
+        getline(file, em);
+        emojis.push_back(em);
+        }
+        while (getline(file, line)) {
+            art += line + "\n";
+        }
+    } else {
+        art = "                 =^v^=";
+    }
+    return 0;
+}
+
+string art;
+vector<string> emojis;
+int multiple = 1;
+
+// Input values for difficulty!! l for hwo long the game takes, w for how wide is the map
 int l = 200, w = 50;
 
-// Color codes
+// Color codes for draw boss if want
 const string RESET = "\033[0m";
 const string WHITE = "\033[37m";
 const string RED = "\033[31m";
@@ -47,16 +78,14 @@ void clearScreen() {
 }
 
 vector<int> generateZeroList(int length) {
-    // Now generates land (0) with some flowers (8)
     vector<int> list(length, 0);
 
-    // Add some random flowers (about 10% chance per tile)
+    // Change the num behind % if want change the density of the energy
     for (int i = 0; i < length; ++i) {
-        if (rand() % 10 == 0) {  // 10% chance for flower
+        if (rand() % 10 == 0) {
             list[i] = 8;
         }
     }
-
     return list;
 }
 
@@ -86,11 +115,8 @@ vector<vector<int>> generateRandomLists(int numLists, int listLength) {
     srand(time(0));  // Seed random number generator
 
     for (int i = 0; i < numLists; ++i) {
-        // Add a wall row with paths (using generateRandomListWithOnes)
-        lists.push_back(generateRandomListWithOnes(listLength, 2, 4));  // Between 2-4 path openings
-
+        lists.push_back(generateRandomListWithOnes(listLength, 2, 4));
         if (i < numLists - 1) {
-            // Add 3 land rows with flowers (using generateZeroList)
             for (int j = 0; j < 3; ++j) {
                 lists.push_back(generateZeroList(listLength));
             }
@@ -101,14 +127,14 @@ vector<vector<int>> generateRandomLists(int numLists, int listLength) {
 }
 
 
-void displayLists(const vector<vector<int>>& lists, int start, int end) {
+void displayLists(const vector<vector<int>>& lists, int start, int end, vector<string>emojis) {
     for (int i = start; i < end; ++i) {
         for (int num : lists[i]) {
             switch (num) {
                 case 0: cout <<"  "; break;
-                case 1: cout <<"💣"; break;
-                case 2: cout <<"😲"; break;
-                case 8: cout <<"⚡"; break;
+                case 1: cout <<emojis[0]; break;
+                case 2: cout <<emojis[1]; break;
+                case 8: cout <<emojis[2]; break;
             }
         }
         cout << RESET << endl;
@@ -116,9 +142,10 @@ void displayLists(const vector<vector<int>>& lists, int start, int end) {
 }
 
 
-int main() {
+int game(int level) {
+        loadpara(level, art, emojis, multiple);
     srand(time(0));
-    vector<vector<int>> lists = generateRandomLists(l, w);
+    vector<vector<int>> lists = generateRandomLists(l-multiple*20, w);
     int cy = l - 1, cx = w / 2;
     int currentStart = l - 20;
     auto startTime = high_resolution_clock::now();
@@ -130,21 +157,14 @@ int main() {
         // Show status
         cout << "HP: ";
         for (int i = 0; i < playerHP; ++i) cout << "\u2764 ";
-        cout << " | [F]Fireball: 20e | [S]Sheild: 10e | [H]Heal: 15e |" << endl;
+        cout << " | [F]Fireball: " << 20-multiple <<"e | [S]Sheild: " << 10-multiple
+        <<"e | [H]Heal: "<< 15-multiple <<"e |" << endl;
         cout << "Energy: " << energy<<endl;
         cout << "Boss HP: ";
-        for (int i = 0; i < bossHP; ++i) cout << "\u2588" << "\u2588";
+        for (int i = 0; i < bossHP; ++i) {for (int j = 0; j<8; j++) cout << "\u2588";}
+        for (int i = 0; i < 10- bossHP; ++i) {for (int j = 0; j<8; j++) cout <<RED << "\u2588";}
         cout << endl;
-
-        cout << "                   \\   /    " << endl;
-        cout << "                    | |     " << endl;
-        cout << "                   (` ')    " << endl;
-        cout << "                   (  v )   " << endl;
-        cout << "                   /   \\    " << endl;
-        cout << "                  /     \\   " << endl;
-        cout << "                 /_______\\  " << endl;
-        cout << "                  |     |   " << endl << endl;
-
+        cout << WHITE <<art <<endl;
 
         if (lists[cy][cx] == 1 || lists[cy][cx] == 3) {
             if (!shieldActive) {
@@ -158,7 +178,7 @@ int main() {
         }
 
         lists[cy][cx] = 2;
-        displayLists(lists, currentStart, currentStart + 20);
+        displayLists(lists, currentStart, currentStart + 20, emojis);
 
         if (cy == 0) {
             auto endTime = high_resolution_clock::now();
@@ -186,17 +206,17 @@ int main() {
             }
         }
         else if (key == 'q') break;
-        else if (key == 'f' && energy>=20) {
+        else if (key == 'f' && energy>=20-multiple) {
                 bossHP--;
-                energy -= 20;
+                energy -= 20*multiple*multiple;
         }
-        else if (key == 's' && energy>=10) {
+        else if (key == 's' && energy>=10-multiple) {
             shieldActive = true;
-            energy -= 10;
+            energy -= 10*multiple*multiple;
         }
-        else if (key == 'h' && energy >= 15 && playerHP < 3) {
+        else if (key == 'h' && energy >= 15-multiple && playerHP < 3) {
             playerHP++;
-            energy -= 15;
+            energy -= 15*multiple*multiple;
         }
 
 
