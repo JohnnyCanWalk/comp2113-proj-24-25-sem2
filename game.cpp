@@ -9,6 +9,7 @@
 #include <map>
 #include <fstream>
 #include "game.h"
+#include "commonfunctions.h"
 
 using namespace std;
 using namespace std::chrono;
@@ -34,15 +35,15 @@ int loadpara(int level, string &art, vector<string> &emojis, int &multiple) {
         }
     } else {
         art = "                 =^v^=";
+        emojis.push_back("🐶");
+        emojis.push_back("🐱");
+        emojis.push_back("🐟");
+        multiple = 1;
     }
     return 0;
 }
 
-string art;
-vector<string> emojis;
-int multiple = 1;
-
-// Input values for difficulty!! l for hwo long the game takes, w for how wide is the map
+// Input values for difficulty l for how long the game takes, w for how wide is the map
 int l = 200, w = 50;
 
 // Color codes for draw boss if want
@@ -53,29 +54,6 @@ const string GREEN = "\033[32m";
 const string YELLOW = "\033[33m";
 const string PURPLE = "\033[35m";
 
-// Game state
-int playerHP = 3;
-int energy = 0;
-bool shieldActive = false;
-int healCount = 1;
-int bossHP = 10;
-int bossX = w/2 - 1;
-
-// Utility
-char getch() {
-    struct termios oldt, newt;
-    tcgetattr(STDIN_FILENO, &oldt);
-    newt = oldt;
-    newt.c_lflag &= ~(ICANON | ECHO);
-    tcsetattr(STDIN_FILENO, TCSANOW, &newt);
-    char c = getchar();
-    tcsetattr(STDIN_FILENO, TCSANOW, &oldt);
-    return c;
-}
-
-void clearScreen() {
-    cout << "\033[2J\033[1;1H";
-}
 
 vector<int> generateZeroList(int length) {
     vector<int> list(length, 0);
@@ -143,6 +121,15 @@ void displayLists(const vector<vector<int>>& lists, int start, int end, vector<s
 
 
 int game(int level) {
+        int playerHP = 3;
+        int energy = 0;
+        bool shieldActive = false;
+        int healCount = 1;
+        int bossHP = 10;
+        int bossX = w/2 - 1;
+        string art = "";
+        vector<string> emojis;
+        int multiple = 1;
         loadpara(level, art, emojis, multiple);
     srand(time(0));
     vector<vector<int>> lists = generateRandomLists(l-multiple*20, w);
@@ -157,8 +144,8 @@ int game(int level) {
         // Show status
         cout << "HP: ";
         for (int i = 0; i < playerHP; ++i) cout << "\u2764 ";
-        cout << " | [F]Fireball: " << 20-multiple <<"e | [S]Sheild: " << 10-multiple
-        <<"e | [H]Heal: "<< 15-multiple <<"e |" << endl;
+        cout << " | [f]Fireball: " << 20-multiple <<"e | [s]Sheild: " << 10-multiple
+        <<"e | [h]Heal: "<< 15-multiple <<"e |" << endl;
         cout << "Energy: " << energy<<endl;
         cout << "Boss HP: ";
         for (int i = 0; i < bossHP; ++i) {for (int j = 0; j<8; j++) cout << "\u2588";}
@@ -188,6 +175,7 @@ int game(int level) {
             else
             cout << "Level failed"<<endl;
             cout << "Time Taken: " << duration << " seconds." << endl;
+            cout << "[q] Quit" << endl;
             break;
         }
 
@@ -206,17 +194,17 @@ int game(int level) {
             }
         }
         else if (key == 'q') break;
-        else if (key == 'f' && energy>=20-multiple) {
+        else if (key == 'f' && energy>=(20-multiple)) {
                 bossHP--;
-                energy -= 20*multiple*multiple;
+                energy -= 20-multiple;
         }
         else if (key == 's' && energy>=10-multiple) {
             shieldActive = true;
-            energy -= 10*multiple*multiple;
+            energy -= 10-multiple;
         }
         else if (key == 'h' && energy >= 15-multiple && playerHP < 3) {
             playerHP++;
-            energy -= 15*multiple*multiple;
+            energy -= 15-multiple;
         }
 
 
