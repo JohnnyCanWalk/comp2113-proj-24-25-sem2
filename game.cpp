@@ -15,8 +15,8 @@ using namespace std;
 using namespace std::chrono;
 
 
-//input level parameters from txt files
-// multiple take negative value fro harder
+// Input level parameters from txt files
+// Multiple take negative value for harder
 int loadpara(int level, string &art, vector<string> &emojis, int &multiple) {
     string path = "lv_info/lv" + to_string(level) + ".txt";
     ifstream file(path);
@@ -69,17 +69,21 @@ vector<int> generateZeroList(int length) {
 
 vector<int> generateRandomListWithOnes(int length, int minOnes, int maxOnes) {
     // Now generates walls (1) with paths (0)
-    vector<int> list(length, 1);  // Start with all wall
+    // Now generates walls (1) with paths (0)
+    vector<int> list(length, 1);  // Start with all wall // Start with all wall
 
     // Determine how many path openings to create
+    // Determine how many path openings to create
     int numPaths = minOnes + rand() % (maxOnes - minOnes + 1);
-    numPaths = min(numPaths, length);  // Ensure we don't exceed length
+    numPaths = min(numPaths, length);  // Ensure we don't exceed length // Ensure we don't exceed length
 
+    // Create paths (0) through the wall
     // Create paths (0) through the wall
     for (int i = 0; i < numPaths; ++i) {
         int pos = rand() % length;
-        list[pos] = 0;  // Create path
+        list[pos] = 0;  // Create path // Create path
 
+        // Optional: make wider paths by clearing adjacent cells
         // Optional: make wider paths by clearing adjacent cells
         if (pos > 0) list[pos-1] = 0;
         if (pos < length-1) list[pos+1] = 0;
@@ -90,7 +94,7 @@ vector<int> generateRandomListWithOnes(int length, int minOnes, int maxOnes) {
 
 vector<vector<int>> generateRandomLists(int numLists, int listLength) {
     vector<vector<int>> lists;
-    srand(time(0));  // Seed random number generator
+    srand(time(0));  // Seed random number generator // Seed random number generator
 
     for (int i = 0; i < numLists; ++i) {
         lists.push_back(generateRandomListWithOnes(listLength, 2, 4));
@@ -141,6 +145,7 @@ int game(int level) {
     while (true) {
         clearScreen();
 
+        // Show status 
         // Show status
         cout << "HP: ";
         for (int i = 0; i < playerHP; ++i) cout << "\u2764 ";
