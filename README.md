@@ -1,10 +1,8 @@
-# comp2113-proj-24-25-sem2
-
 ### Project of Group 28, 24-25 Sem 2 
 
 ## Team Members
   Chan Tsz Him Chris  
-  
+  Chan Zhi Ying  3036406212  
   Chu CHun Ho Kevin  3036387753  
 
 # Game Description
@@ -13,6 +11,8 @@
 # Features  
   - File I/O is used to load graphics of Bosses(Req. 4)
   - Map for every stage is randomized(Req. 1)
+  - 3 difficulty levels per stage(Req. 6)
+  - Header files (.h) are used to store declarations of functions, variables and constants separately
 
 team members, application description, features, non-standard libraries, and compilation/execution instructions.  
 ▪ Identification of the team members.  
