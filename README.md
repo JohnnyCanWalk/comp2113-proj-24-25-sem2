@@ -13,7 +13,11 @@
   - Map for every stage is randomized(Req. 1)
   - 3 difficulty levels per stage(Req. 6)
   - Header files (.h) are used to store declarations of functions, variables and constants separately
-
+  
+  
+  
+  
+  
 team members, application description, features, non-standard libraries, and compilation/execution instructions.  
 ▪ Identification of the team members.  
 ▪ A description of your game.   
