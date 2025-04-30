@@ -44,10 +44,8 @@ int loadpara(int level, string &art, vector<string> &emojis, int &multiple) {
 }
 
 // Input values for difficulty l for how long the game takes, w for how wide is the map
-// Input values for difficulty l for how long the game takes, w for how wide is the map
 int l = 200, w = 50;
 
-// Color codes for draw boss if want
 // Color codes for draw boss if want
 const string RESET = "\033[0m";
 const string WHITE = "\033[37m";
@@ -61,7 +59,6 @@ vector<int> generateZeroList(int length) {
     vector<int> list(length, 0);
 
     // Change the num behind % if want change the density of the energy
-    // Change the num behind % if want change the density of the energy
     for (int i = 0; i < length; ++i) {
         if (rand() % 10 == 0) {
             list[i] = 8;
@@ -72,21 +69,17 @@ vector<int> generateZeroList(int length) {
 
 vector<int> generateRandomListWithOnes(int length, int minOnes, int maxOnes) {
     // Now generates walls (1) with paths (0)
-    // Now generates walls (1) with paths (0)
-    vector<int> list(length, 1);  // Start with all wall // Start with all wall
+    vector<int> list(length, 1);  // Start with all wall
 
-    // Determine how many path openings to create
     // Determine how many path openings to create
     int numPaths = minOnes + rand() % (maxOnes - minOnes + 1);
-    numPaths = min(numPaths, length);  // Ensure we don't exceed length // Ensure we don't exceed length
+    numPaths = min(numPaths, length);  // Ensure we don't exceed length
 
-    // Create paths (0) through the wall
     // Create paths (0) through the wall
     for (int i = 0; i < numPaths; ++i) {
         int pos = rand() % length;
-        list[pos] = 0;  // Create path // Create path
+        list[pos] = 0;  // Create path
 
-        // Optional: make wider paths by clearing adjacent cells
         // Optional: make wider paths by clearing adjacent cells
         if (pos > 0) list[pos-1] = 0;
         if (pos < length-1) list[pos+1] = 0;
@@ -97,7 +90,7 @@ vector<int> generateRandomListWithOnes(int length, int minOnes, int maxOnes) {
 
 vector<vector<int>> generateRandomLists(int numLists, int listLength) {
     vector<vector<int>> lists;
-    srand(time(0));  // Seed random number generator // Seed random number generator
+    srand(time(0));  // Seed random number generator
 
     for (int i = 0; i < numLists; ++i) {
         lists.push_back(generateRandomListWithOnes(listLength, 2, 4));
@@ -149,7 +142,6 @@ int game(int level) {
         clearScreen();
 
         // Show status 
-        // Show status
         cout << "HP: ";
         for (int i = 0; i < playerHP; ++i) cout << "\u2764 ";
         cout << " | [f]Fireball: " << 20-multiple <<"e | [s]Sheild: " << 10-multiple
