@@ -44,8 +44,10 @@ int loadpara(int level, string &art, vector<string> &emojis, int &multiple) {
 }
 
 // Input values for difficulty l for how long the game takes, w for how wide is the map
+// Input values for difficulty l for how long the game takes, w for how wide is the map
 int l = 200, w = 50;
 
+// Color codes for draw boss if want
 // Color codes for draw boss if want
 const string RESET = "\033[0m";
 const string WHITE = "\033[37m";
@@ -58,6 +60,7 @@ const string PURPLE = "\033[35m";
 vector<int> generateZeroList(int length) {
     vector<int> list(length, 0);
 
+    // Change the num behind % if want change the density of the energy
     // Change the num behind % if want change the density of the energy
     for (int i = 0; i < length; ++i) {
         if (rand() % 10 == 0) {
