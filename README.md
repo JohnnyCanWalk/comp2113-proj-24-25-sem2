@@ -1,18 +1,22 @@
 ### Project of Group 28, 24-25 Sem 2 
 
 ## Team Members
-  Chan Tsz Him Chris  
+  Chan Tsz Him Chris  3036406195
   Chan Zhi Ying  3036406212  
-  Chu CHun Ho Kevin  3036387753  
+  Chu Chun Ho Kevin  3036387753  
 
 # Game Description
-  boss? stages? realms? ill wait
+  AI has taken over the world! Collect charges on your way and defeat bosses within the time limit to escape! can you make your way out of this matrix?  
+  10 bosses  
+    
+  Controls:  
+  Arrow keys: Movement/cursor
 
 # Features  
   - File I/O is used to load graphics of Bosses(Req. 4)
   - Map for every stage is randomized(Req. 1)
   - 3 difficulty levels per stage(Req. 6)
-  - Header files (.h) are used to store declarations of functions, variables and constants separately
+  - maps, game mechanics, NPC sprites are encoded in separate files(Req. 5)
   
   
   
