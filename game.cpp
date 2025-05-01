@@ -56,9 +56,10 @@ const string YELLOW = "\033[33m";
 const string PURPLE = "\033[35m";
 
 
-int game(int level) {
+int game(int level, int &result) {
         int playerHP = 3;
         int energy = 0;
+        bool survive = true;
         bool shieldActive = false;
         int healCount = 1;
         int bossHP = 10;
@@ -93,8 +94,7 @@ int game(int level) {
             if (!shieldActive) {
                 playerHP--;
                 if (playerHP <= 0) {
-                    cout << RED << "Game Over!" << RESET << endl;
-                    break;
+                survive = false;
                 }
             }
             shieldActive = false;
@@ -103,16 +103,24 @@ int game(int level) {
         lists[cy][cx] = 2;
         displayLists(lists, currentStart, currentStart + 20, emojis);
 
+        if (survive == false) {
+                clearScreen();
+                     cout << RED << "Game Over!" << endl;
+                     cout <<WHITE<< "[q] Quit" << endl;
+        }
+
         if (cy == 0) {
             auto endTime = high_resolution_clock::now();
             auto duration = duration_cast<seconds>(endTime - startTime).count();
             if (bossHP == 0)
-            cout << GREEN << "You reached the summit and defeated the boss!" << RESET << endl;
+            cout << GREEN << "You reached the summit and defeated the bot!" << RESET << endl;
             else
-            cout << "Level failed"<<endl;
+            cout << "You failed to defeat the bot :("<<endl;
             cout << "Time Taken: " << duration << " seconds." << endl;
+                result = duration;
+
             cout << "[q] Quit" << endl;
-            break;
+
         }
 
         if (rand() % 20 == 0) lists[rand() % l][rand() % w] = 8;
@@ -129,7 +137,7 @@ int game(int level) {
                 else if (key == 'D') { if (cx > 0) cx--; }
             }
         }
-        else if (key == 'q') break;
+        else if (key == 'q') return 0;
         else if (key == 'f' && energy>=(20-multiple)) {
                 bossHP--;
                 energy -= 20-multiple;
@@ -152,4 +160,3 @@ int game(int level) {
     }
     return 0;
 }
-
