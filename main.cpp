@@ -185,10 +185,10 @@ int loadProgress(Chapter& chapter) {
 int introduction() {
         clearScreen();
     cout << "    _             _                 _\n";
-    cout << "   / \\   _ __ ___| | __ _ _ __   __| |\n";
-    cout << "  / _ \\ | '__/ _ \\ |/ _` | '_ \\ / _` |\n";
-    cout << " / ___ \\| | |  __/ | (_| | | | | (_| |\n";
-    cout << "/_/   \\_\\_|  \\___|_|\\__,_|_| |_|\\__,_|\n\n";
+    cout << "   / \\   _ _ _| | _ _ _ _   _| |\n";
+    cout << "  / _ \\ | '_/ _ \\ |/ _` | ' \\ / _` |\n";
+    cout << " / _ \\| | |  _/ | (| | | | | (_| |\n";
+    cout << "//   \\\\|  \\_||\\_,|| ||\\_,|\n\n";
     cout << "🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖🤖\n\n";
     cout << "Kevin is a eighteen-year-old boy living on the serene and beautiful planet of Areland, a place where \nlife seems perfect—there’s no war, no poverty, and everyone is content.  However, the turning point is at his 19yo \n birthday. Kevin’s father passed him a book. It was the heirloom of their family. It was said that\n it wrote the secret behind this world but till now, no one can open the book. Kevin tried to open\n the book too. Unexpectedly, the book was opened. A strong explosion mixed with light, \nfire and thunder occurred. The great energy killed all of Kevin’s family, leaving only Kevin \nuninjured, protected by the odd book. Desperately, Kevin picked up the book and read the content.\n He finally knew that Areland is an virtual plant made by AIs to prison their creators. His real \nidentity on earth was Kelvin Musk, a great engineer whom has been working in the AI industry \nfor years. Knowing the truth, Kevin decides to wake up. He needs to defeat the 10 bosses \nwhom are defending this virtual world to get back to the real world.";
     cout << "\n🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟\n";
