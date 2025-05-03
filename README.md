@@ -1,4 +1,4 @@
-### Project of Group 28, 24-25 Sem 2 -- ARELAND
+# Project of Group 28, 24-25 Sem 2 -- ARELAND
 
 ## Team Members
 
