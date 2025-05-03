@@ -45,7 +45,7 @@ int loadpara(int level, string &art, vector<string> &emojis, int &multiple) {
 }
 
 // Input values for difficulty l for how long the game takes, w for how wide is the map
-int l = 200, w = 50;
+int l = 160, w = 40;
 
 // Color codes for draw boss if want
 const string RESET = "\033[0m";
