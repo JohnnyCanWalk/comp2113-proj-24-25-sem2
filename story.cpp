@@ -18,7 +18,7 @@ string story(int choose) {
         s = "In the depths of the Pacific, Tralalero Tralala, a shark of legend, glides with an eerie grace.\n Clad in mysterious Nike boots, his fins cut through the water, leaving a trail of bubbles and awe.\n  Fishermen whisper of his speed, his relentless pursuit of the swiftest prey. \n Some say he's a guardian of the sea's secrets, others a harbinger of stormy nights.\n  His boots, a gift from the gods, grant him power and fear. Yet, beneath the terror, Tralalero holds a secret: \n a heart that longs for the surface, for a world where he might be understood."
     ;}
     else if (choose == 4) {
-        s = "Tung Tung Tung Sahur is a terrifying anomaly in the form of a night patrol drum. \n Legend has it that if you are called for Sahur three times and don't respond, it will appear and haunt you. \n Its sound resembles that of a beating drum, ‘tung tung tung.’";
+        s = "Tung Tung Tung Sahur is a terrifying anomaly in the form of a night patrol drum. \n Legend has it that if you are called for Sahur three times and don't respond, it will appear and haunt you... \n Its sound resembles that of a beating drum, ‘tung tung tung.’";
 
     }
     else if (choose == 5) {
