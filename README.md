@@ -22,13 +22,18 @@
     
 ## Controls:
   
-▪ Arrow keys: Movement/Select stage  
+▪ Arrow keys: Movement/Select stage 
+
 ▪ A: Confirm stage  
+
 ▪ S: Deploy shield  
+
 ▪ H: Heal  
+
 ▪ F: Fight  
+
 ▪ Q: Quit  
- 
+
 
 ## Coding Features
 
@@ -59,4 +64,21 @@
   In the same directory, enter ```make main```
 
   Enter ```./main```
+
+## Libraries used
+
+#include <iostream>
+#include <fstream>
+#include <vector>
+#include <cstdlib>
+#include <ctime>
+#include <unistd.h>
+#include <algorithm>
+#include <termios.h>
+#include <chrono>
+#include <map>
+#include <algorithm>
+#include <chrono>
+#include <map>
+#include <fstream>
   
