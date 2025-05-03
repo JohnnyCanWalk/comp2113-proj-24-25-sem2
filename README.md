@@ -52,4 +52,9 @@
 
 ## Compilation instructions  
 
-  Download all the files onto any Linux directory
+  Download all the files onto any Linux directory  
+
+  In the same directory, enter ```make main```
+
+  Enter ```./main```
+  
