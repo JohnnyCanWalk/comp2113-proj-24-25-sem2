@@ -64,7 +64,7 @@ void printlevel(int n, string chapterName, bool isSelected, bool isLocked, bool 
     string statusIcon = isLocked ? "🔒" : (isCompleted ? "✅" : "__");
 
     // Print the top border
-    print(borderColor + " _ ", n * 6 - 5, 5);
+    print(borderColor + " __ ", n * 6 - 5, 5);
     // Print the left and right borders with the level number centered
     if (n == 10){
       print(borderColor + "|" + numberColor + numberText + " " + borderColor + "|", n * 6 - 5, 6);
