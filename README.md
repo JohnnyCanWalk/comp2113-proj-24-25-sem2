@@ -20,19 +20,18 @@
   Q: Quit  
  
 
-## Coding Features  
-  - File I/O is used to load sprites of Bosses(Req. 4)
-  - Map for every stage is randomized(Req. 1)
-  - 1 boss per stage, and every stage increases in difficulty(Req. 6)
-  - maps, game mechanics, NPC sprites are encoded in separate files(Req. 5)
-  - In main.cpp, a linked list of a class is used to chose levels(Req. 3)
-  - for new players, a new file named progress.txt is automatically created while main.cpp is being run to store progress. lv_info also contains the graphics of every map in the form of .txt files.(Req. 2)
-  
-  
-  passing requirements:
-  defeat the boss before reaching the end
-  reach the end within 200 seconds
-  stay alive
+## Coding Features
+▪ File I/O for Boss Sprites: Utilizes file input/output to load boss sprite assets. (Req. 4)
+▪ Randomized Stage Maps: Each stage features a randomly generated map layout. (Req. 1)
+▪ Increasing Difficulty: Every stage has 1 boss, with difficulty progressively rising. (Req. 6)
+▪ Modular File Structure: Maps, game mechanics, and NPC sprites are stored in separate files. (Req. 5)
+▪ Level Selection via Linked List: In main.cpp, a linked list of a class is used to select levels. (Req. 3)
+▪ Progress Tracking: Automatically creates a progress.txt file for new players to store progress. lv_info also includes map graphics in .txt format. (Req. 2)
+
+## Passing Requirements:
+▪ Defeat the boss before reaching the end.
+▪ Reach the end within 200 seconds.
+▪ Stay alive throughout the game.
 
 ## Compilation instructions  
   Download all the files onto any Linux directory
