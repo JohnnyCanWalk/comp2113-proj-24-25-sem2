@@ -161,7 +161,7 @@ int loadProgress(Chapter& chapter) {
             }
         }
         file.close();
-        return firstUnlockedLevel; // Return the index of the first unlocked level
+        return firstUnlockedLevel; 
     } else {
         // Initialize progress.txt with default values
         ofstream outFile("progress.txt");
