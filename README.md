@@ -9,10 +9,7 @@
   Link: https://drive.google.com/file/d/13Eh5vSS6IrDezQwenHgbikODeE69kZKA/view?usp=drive_link  
 
 ## Game Description
-  
-    
-  AI has taken over the world! Collect charges on your way and defeat bosses within the time limit to escape! can you make your way out of this matrix?  
-  10 bosses  
+  Kevin is a eighteen-year-old boy living on the serene and beautiful planet of Areland, a place where \nlife seems perfect—there’s no war, no poverty, and everyone is content.  However, the turning point is at his 19yo \n birthday. Kevin’s father passed him a book. It was the heirloom of their family. It was said that\n it wrote the secret behind this world but till now, no one can open the book. Kevin tried to open\n the book too. Unexpectedly, the book was opened. A strong explosion mixed with light, \nfire and thunder occurred. The great energy killed all of Kevin’s family, leaving only Kevin \nuninjured, protected by the odd book. Desperately, Kevin picked up the book and read the content.\n He finally knew that Areland is an virtual plant made by AIs to prison their creators. His real \nidentity on earth was Kelvin Musk, a great engineer whom has been working in the AI industry \nfor years. Knowing the truth, Kevin decides to wake up. He needs to defeat the 10 bosses \nwhom are defending this virtual world to get back to the real world.  
     
   Controls:
   Arrow keys: Movement/Select stage  
