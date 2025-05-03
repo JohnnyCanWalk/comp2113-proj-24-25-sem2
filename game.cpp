@@ -17,7 +17,7 @@ using namespace std::chrono;
 
 
 //input level parameters from txt files
-// multiple take negative value fro harder
+// multiple take negative value for harder
 int loadpara(int level, string &art, vector<string> &emojis, int &multiple) {
     string path = "lv_info/lv" + to_string(level) + ".txt";
     ifstream file(path);
