@@ -1,4 +1,4 @@
-### Project of Group 28, 24-25 Sem 2 
+### Project of Group 28, 24-25 Sem 2 -- ARELAND
 
 ## Team Members
   Chan Tsz Him Chris  3036406195
@@ -7,15 +7,10 @@
 
 
 
-# Game Description
+## Game Description
   
-  ### ARELAND  
-        _             _                 _
-       / \\   _ _ _| | _ _ _ _   _| |
-      / _ \\ | '_/ _ \\ |/ _` | ' \\ / _` |
-     / _ \\| | |  _/ | (| | | | | (_| |
-    //   \\\\|  \\_||\\_,|| ||\\_,|
-  AI has taken over the world! Collect charges on your way and defeat bosses within the time limit to escape! can you make your way out of this matrix?  
+    
+  AI has taken over the world, and ! Collect charges on your way and defeat bosses within the time limit to escape! can you make your way out of this matrix?  
   10 bosses  
     
   Controls:
@@ -32,7 +27,8 @@
   - Map for every stage is randomized(Req. 1)
   - 1 boss per stage, and every stage increases in difficulty(Req. 6)
   - maps, game mechanics, NPC sprites are encoded in separate files(Req. 5)
-  - in main.cpp, a linked list of a class is used to chose levels(Req. 2)
+  - In main.cpp, a linked list of a class is used to chose levels(Req. 3)
+  - for new players, a new file named progress.txt is automatically created while main.cpp is being run to store progress. lv_info also contains the graphics of every map in the form of .txt files.(Req. 2)
   
   
   passing requirements:
