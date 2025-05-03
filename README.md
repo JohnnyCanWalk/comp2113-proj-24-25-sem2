@@ -6,11 +6,6 @@
   Chu Chun Ho Kevin  3036387753  
 
 # Game Description
-    _             _                 _ 
-   / \   _ __ ___| | __ _ _ __   __| |
-  / _ \ | '__/ _ \ |/ _` | '_ \ / _` |
- / ___ \| | |  __/ | (_| | | | | (_| |
-/_/   \_\_|  \___|_|\__,_|_| |_|\__,_|
   AI has taken over the world! Collect charges on your way and defeat bosses within the time limit to escape! can you make your way out of this matrix?  
   10 bosses  
     
