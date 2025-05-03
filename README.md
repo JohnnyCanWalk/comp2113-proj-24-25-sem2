@@ -5,13 +5,13 @@
   Chan Zhi Ying  3036406212  
   Chu Chun Ho Kevin  3036387753  
 
-# Demonstration Video
+## Demonstration Video
   Link: https://drive.google.com/file/d/13Eh5vSS6IrDezQwenHgbikODeE69kZKA/view?usp=drive_link  
 
 ## Game Description
   
     
-  AI has taken over the world, and ! Collect charges on your way and defeat bosses within the time limit to escape! can you make your way out of this matrix?  
+  AI has taken over the world! Collect charges on your way and defeat bosses within the time limit to escape! can you make your way out of this matrix?  
   10 bosses  
     
   Controls:
@@ -23,7 +23,7 @@
   Q: Quit  
  
 
-# Features  
+## Coding Features  
   - File I/O is used to load sprites of Bosses(Req. 4)
   - Map for every stage is randomized(Req. 1)
   - 1 boss per stage, and every stage increases in difficulty(Req. 6)
@@ -37,8 +37,8 @@
   reach the end within 200 seconds
   stay alive
 
-  #Compilation instructions  
-  download all the files onto any Linux directory
+## Compilation instructions  
+  Download all the files onto any Linux directory
   
 team members, application description, features, non-standard libraries, and compilation/execution instructions.  
 ▪ Identification of the team members.  
