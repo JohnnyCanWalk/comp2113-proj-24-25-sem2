@@ -6,21 +6,32 @@
   Chu Chun Ho Kevin  3036387753  
 
 # Game Description
+  
+  ###ARELAND  
   AI has taken over the world! Collect charges on your way and defeat bosses within the time limit to escape! can you make your way out of this matrix?  
   10 bosses  
     
-  Controls:  
-  Arrow keys: Movement/cursor
+  Controls:
+  Arrow keys: Movement/cursor  
+  Enter: Confirm  
+  Q: Quit
+  F: 
 
 # Features  
-  - File I/O is used to load graphics of Bosses(Req. 4)
+  - File I/O is used to load sprites of Bosses(Req. 4)
   - Map for every stage is randomized(Req. 1)
-  - 3 difficulty levels per stage(Req. 6)
+  - 1 boss per stage, and every stage increases in difficulty(Req. 6)
   - maps, game mechanics, NPC sprites are encoded in separate files(Req. 5)
+  - in main.cpp, a linked list of a class is used to chose levels(Req. 2)
   
   
-  
-  
+  passing requirements:
+  defeat the boss before reaching the end
+  reach the end within 200 seconds
+  stay alive
+
+  #Compilation instructions  
+  download all the files onto any Linux directory
   
 team members, application description, features, non-standard libraries, and compilation/execution instructions.  
 ▪ Identification of the team members.  
