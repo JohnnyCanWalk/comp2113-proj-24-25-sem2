@@ -7,15 +7,23 @@
 
 # Game Description
   
-  ###ARELAND  
+  ### ARELAND  
+        _             _                 _
+       / \\   _ _ _| | _ _ _ _   _| |
+      / _ \\ | '_/ _ \\ |/ _` | ' \\ / _` |
+     / _ \\| | |  _/ | (| | | | | (_| |
+    //   \\\\|  \\_||\\_,|| ||\\_,|
   AI has taken over the world! Collect charges on your way and defeat bosses within the time limit to escape! can you make your way out of this matrix?  
   10 bosses  
     
   Controls:
-  Arrow keys: Movement/cursor  
-  Enter: Confirm  
-  Q: Quit
-  F: 
+  Arrow keys: Movement/Select stage  
+  A: Confirm stage  
+  S: Deploy shield  
+  H: Heal  
+  F: Fight  
+  Q: Quit  
+ 
 
 # Features  
   - File I/O is used to load sprites of Bosses(Req. 4)
