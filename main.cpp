@@ -183,7 +183,7 @@ int loadProgress(Chapter& chapter) {
 }
 
 int introduction() {
-        clearScreen();
+    clearScreen();
     cout << "    _             _                 _\n";
     cout << "   / \\   _ _ _| | _ _ _ _   _| |\n";
     cout << "  / _ \\ | '_/ _ \\ |/ _` | ' \\ / _` |\n";
