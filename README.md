@@ -1,14 +1,19 @@
 ### Project of Group 28, 24-25 Sem 2 -- ARELAND
 
 ## Team Members
-  Chan Tsz Him Chris  3036406195
-  Chan Zhi Ying  3036406212  
-  Chu Chun Ho Kevin  3036387753  
+
+▪ Chan Tsz Him Chris  3036406195
+
+▪ Chan Zhi Ying  3036406212  
+
+▪ Chu Chun Ho Kevin  3036387753  
 
 ## Demonstration Video
+
   Link: https://drive.google.com/file/d/13Eh5vSS6IrDezQwenHgbikODeE69kZKA/view?usp=drive_link  
 
 ## Game Description
+
   Kevin is a eighteen-year-old boy living on the serene and beautiful planet of Areland, a place where life seems perfect—there’s no war, no poverty, and everyone is content.  However, the turning point is at his 19yo birthday. Kevin’s father passed him a book. It was the heirloom of their family. It was said that it wrote the secret behind this world but till now, no one can open the book. Kevin tried to open the book too. Unexpectedly, the book was opened. A strong explosion mixed with light, fire and thunder occurred. The great energy killed all of Kevin’s family, leaving only Kevin uninjured, protected by the odd book. Desperately, Kevin picked up the book and read the content.He finally knew that Areland is an virtual plant made by AIs to prison their creators. His real identity on earth was Kelvin Musk, a great engineer whom has been working in the AI industry for years. Knowing the truth, Kevin decides to wake up. He needs to defeat the 10 bosses whom are defending this virtual world to get back to the real world.  
     
 ## Controls:
